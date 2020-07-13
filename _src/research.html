@@ -23,132 +23,7 @@ limitations under the License.
 {% endcomment %}
 -->
 
-
-<style>
-  .timel {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timel::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color:#474e5d;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-  }
-  
-  /* Container around content */
-  .con {
-    padding: 10px 40px;
-    position: relative;
-    background-color: inherit;
-    width: 50%;
-  }
-  
-  /* The circles on the timeline */
-  .con::after {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    right: -17px;
-    background-color: white;
-    border: 4px solid #FF9F55;
-    top: 15px;
-    border-radius: 50%;
-    z-index: 1;
-  }
-  
-  /* Place the container to the left */
-  .lefty {
-    left: 0;
-  }
-  
-  /* Place the container to the right */
-  .righty {
-    left: 50%;
-  }
-  
-  /* Add arrows to the left container (pointing right) */
-  .lefty::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid #474e5d;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #474e5d;
-  }
-  
-  /* Add arrows to the right container (pointing left) */
-  .righty::before {
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid #474e5d;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #474e5d transparent transparent;
-  }
-  
-  /* Fix the circle for containers on the right side */
-  .righty::after {
-    left: -16px;
-  }
-  
-  /* The actual content */
-  .contents {
-    padding: 20px 30px;
-    background-color: #474e5d;
-    position: relative;
-    border-radius: 6px;
-  }
-  
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
-    /* Place the timelime to the left */
-    .timeline::after {
-    left: 31px;
-    }
-    
-    /* Full-width containers */
-    .con {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-    }
-    
-    /* Make sure that all arrows are pointing leftwards */
-    .con::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-    }
-  
-    /* Make sure all circles are at the same spot */
-    .lefty::after, .righty::after {
-    left: 15px;
-    }
-    
-    /* Make all right containers behave like the left ones */
-    .righty {
-    left: 0%;
-    }
-  }
-  </style>
+   
 
 <section class="full-stripe full-stripe--subpage-header clear-header">
   <div class="ml-container ml-container--horizontally-center">
@@ -160,49 +35,50 @@ limitations under the License.
 
  <div class="col col-12  content-group--medium-bottom-margin"> 
  
- <div class="timel">
-  <div class="con lefty">
-    <div class="contents">
+ <div class="">
+    <div class="">
+      
       <h2>2018</h2>
-             <p>Compressed Linear Algebra for Large-Scale Machine Learning
+      <a href="https://researcher.watson.ibm.com/researcher/files/ibm-Matthias.Boehm1/VLDBJ2017_cla.pdf"><p>
+        Compressed Linear Algebra for Large-Scale Machine Learning
         Ahmed Elgohary, Matthias Boehm, Peter J. Haas, Frederick R. Reiss, Berthold Reinwald
         VLDB Journal, 2018
-        [paper (author version)]</p>
-                <p>On Optimizing Operator Fusion Plans for Large-Scale Machine Learning in SystemML
+      </p></a>
+        
+      <a href="https://arxiv.org/pdf/1801.00829.pdf"><p>
+        On Optimizing Operator Fusion Plans for Large-Scale Machine Learning in SystemML
         Matthias Boehm, Berthold Reinwald, Dylan Hutchison, Alexandre V. Evfimievski, Prithviraj Sen
         CoRR,abs/1801.00829, 2018
-        [paper (preprint)]</p>
+      </p></a>
     </div>
-  </div>
-  <div class="con righty">
-    <div class="contents">
+    <div class="">
       <h2>2017</h2>
-          <p>Scaling Machine Learning via Compressed Linear Algebra
-    Ahmed Elgohary, Matthias Boehm, Peter J. Haas, Frederick R. Reiss, Berthold Reinwald
-    SIGMOD Record 46(1), 2017
-    [paper]</p>
-       <p>SPOOF: Sum-Product Optimization and Operator Fusion for Large-Scale Machine Learning
-    Tarek Elgamal, Shangyu Luo, Matthias Boehm, Alexandre V. Evfimievski, Shirish Tatikonda, Berthold Reinwald, Prithviraj Sen:
-    CIDR, 2017
-    [paper, slides]</p>
+      <a href="https://researcher.watson.ibm.com/researcher/files/ibm-Matthias.Boehm1/SIGMODRec2017.pdf"><p>
+        Scaling Machine Learning via Compressed Linear Algebra Ahmed Elgohary, Matthias Boehm, Peter J. Haas, Frederick R. Reiss, Berthold Reinwald
+        SIGMOD Record 46(1), 2017
+      </p></a>
+      <a href="https://researcher.watson.ibm.com/researcher/files/ibm-Matthias.Boehm1/CIDR2017_spoof.pdf"> <p>   SPOOF: Sum-Product Optimization and Operator Fusion for Large-Scale Machine Learning
+      Tarek Elgamal, Shangyu Luo, Matthias Boehm, Alexandre V. Evfimievski, Shirish Tatikonda, Berthold Reinwald, Prithviraj Sen:
+      CIDR, 2017
+     </p> </a>
     </div>
-  </div>
-  <div class="con lefty">
-    <div class="contents">
+
+  
+    <div class="">
       <h2>2016</h2>
           <p>Compressed Linear Algebra for Large-Scale Machine Learning
-    Ahmed Elgohary, Matthias Boehm, Peter J. Haas, Frederick R. Reiss, Berthold Reinwald
-    PVLDB 9(12), 2016</p>
-       <p>Declarative Machine Learning - A Classification of Basic Properties and Types
-    Matthias Boehm, Alexandre V. Evfimievski, Niketan Pansare, Berthold Reinwald
-    CoRR,abs/1605.05826, 2016</p>
-       <p>SystemML: Declarative Machine Learning on Spark (Industrial)
-    Matthias Boehm, Michael W. Dusenberry, Deron Eriksson, Alexandre V. Evfimievski, Faraz Makari Manshadi, Niketan Pansare, Berthold Reinwald, Frederick R. Reiss, Prithviraj Sen, Arvind C. Surve, Shirish Tatikonda
-    PVLDB 9(13), 2016</p>
+            Ahmed Elgohary, Matthias Boehm, Peter J. Haas, Frederick R. Reiss, Berthold Reinwald
+            PVLDB 9(12), 2016</p>
+          <p>Declarative Machine Learning - A Classification of Basic Properties and Types
+          Matthias Boehm, Alexandre V. Evfimievski, Niketan Pansare, Berthold Reinwald
+           CoRR,abs/1605.05826, 2016</p>
+          <p>SystemML: Declarative Machine Learning on Spark (Industrial)
+           Matthias Boehm, Michael W. Dusenberry, Deron Eriksson, Alexandre V. Evfimievski, Faraz Makari Manshadi, Niketan Pansare, Berthold Reinwald, Frederick R. Reiss, Prithviraj Sen, Arvind C. Surve, Shirish Tatikonda
+            PVLDB 9(13), 2016</p>
     </div>
-  </div>
-  <div class="con righty">
-    <div class="contents">
+ 
+  
+    <div class="">
       <h2>2015</h2>
           <p>On Optimizing Machine Learning Workloads via Kernel Fusion
     Arash Ashari, Shirish Tatikonda, Matthias Boehm, Berthold Reinwald, Keith Campbell, John Keenleyside, P. Sadayappan
@@ -214,9 +90,9 @@ limitations under the License.
     Botong Huang, Matthias Boehm, Yuanyuan Tian, Berthold Reinwald, Shirish Tatikonda, Frederick R. Reiss
     SIGMOD, 2015</p>
     </div>
-  </div>
-  <div class="con lefty">
-    <div class="contents">
+ 
+  
+    <div class="">
       <h2>2014</h2>
           <p>Large Scale Discriminative Metric Learning
     Peter D. Kirchner, Matthias Boehm, Berthold Reinwald, Daby M. Sow, Michael Schmidt, Deepak S. Turaga, Alain Biem
@@ -228,31 +104,31 @@ limitations under the License.
     Matthias Boehm, Douglas R. Burdick, Alexandre V. Evfimievski, Berthold Reinwald, Frederick R. Reiss, Prithviraj Sen, Shirish Tatikonda, Yuanyuan Tian
     IEEE Data Eng. Bull. 37(3), 2014</p>
     </div>
-  </div>
-  <div class="con righty">
-    <div class="contents">
+
+  
+    <div class="">
       <h2>2013</h2>
           <p>Compiling Machine Learning Algorithms with SystemML (Poster)
     Matthias Boehm, Douglas Burdick, Alexandre V. Evfimievski, Berthold Reinwald, Prithviraj Sen, Shirish Tatikonda, Yuanyuan Tian
     SOCC, 2013</p>
     </div>
-  </div>
-   <div class="con lefty">
-    <div class="contents">
+>
+   
+    <div class="">
       <h2>2012</h2>
           <p>Scalable and Numerically Stable Descriptive Statistics in SystemML
     Y. Tian, S. Tatikonda, B. Reinwald
     Data Engineering (ICDE), 2012 IEEE 28th International Conference on, pp. 1351--1359</p>
     </div>
-  </div>
-    <div class="con righty">
-    <div class="contents">
+ 
+    
+    <div class="">
       <h2>2011</h2>
               <p>SystemML: Declarative machine learning on MapReduce
     A. Ghoting, R. Krishnamurthy, E. Pednault, B. Reinwald, V. Sindhwani, S. Tatikonda, Y. Tian, S. Vaithyanathan
     Data Engineering (ICDE), 2011 IEEE 27th International Conference on, pp. 231--242</p>
         </div>
-  </div>
+ 
 </div>
 </div><!-- col col-12  content-group--medium-bottom-margin --> -->
 

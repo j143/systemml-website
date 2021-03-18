@@ -7,6 +7,7 @@ const gutil = require('gulp-util');
 const browserSync = require('browser-sync');
 const sourcemaps = require('gulp-sourcemaps');
 const jekyll = process.platform === 'win32' ? 'jekyll.bat':'jekyll';
+//const jekyll = process.platform === 'win64' ? 'jekyll.bat':'jekyll';
 
 // PATHS
 const config = {

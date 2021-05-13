@@ -1,4 +1,4 @@
-name: Build website
+name: git commit and push
 
 on:
   # enable manual workflow trigger

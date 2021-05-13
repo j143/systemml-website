@@ -1,0 +1,36 @@
+name: Build website
+
+on:
+  # enable manual workflow trigger
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checking git push command
+        uses: actions/setup-node@v2.1.5
+        with:
+          # Set always-auth in npmrc
+          always-auth: false # optional, default is false
+          # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
+          node-version: 14.x # optional
+          # Target architecture for Node to use. Examples: x86, x64. Will use system architecture by default.
+          architecture: x64
+      - run: |
+          echo "test git push command"
+          set -e
+          # get current commit hash
+          CURRENT_HASH=$(git rev-parse HEAD)
+          # get last commit hash of last build dist
+          LAST_BUILD_HASH=$(git log --author=google-github-actions-bot -1 --pretty=format:"%H")
+          DIFF=""
+          # build and commit dist if diff
+          git config --global user.name "actions-bot"
+          git config user.email 'github-actions-bot@google.com'
+          touch hello.txt
+          git add hello.txt
+          git commit -m "chore: check for commits"

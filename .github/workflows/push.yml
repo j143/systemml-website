@@ -30,7 +30,8 @@ jobs:
           DIFF=""
           # build and commit dist if diff
           git config --global user.name "actions-bot"
-          git config user.email 'github-actions-bot@google.com'
+          git config user.email 'j143@protonmail.com'
           touch hello.txt
           git add hello.txt
           git commit -m "chore: check for commits"
+          git push origin master

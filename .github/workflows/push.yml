@@ -31,7 +31,9 @@ jobs:
           # build and commit dist if diff
           git config --global user.name "actions-bot"
           git config user.email 'j143@protonmail.com'
-          touch hello.txt
-          git add hello.txt
+          touch hello1.txt
+          git add hello1.txt
           git commit -m "chore: check for commits"
-          git push origin master
+          git push --set-upstream origin builds
+          git push origin builds
+          

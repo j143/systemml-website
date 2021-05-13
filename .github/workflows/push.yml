@@ -35,5 +35,5 @@ jobs:
           git add hello1.txt
           git commit -m "chore: check for commits"
           git push --set-upstream origin builds
-          git push origin builds
+          git push -f origin builds
           
